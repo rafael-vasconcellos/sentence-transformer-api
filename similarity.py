@@ -20,7 +20,7 @@ def get_similarity_batched(texts1: List[str], texts2: List[str]):
     embeddings1 = st_model.encode(texts1, convert_to_tensor=True, show_progress_bar=False)
     embeddings2 = st_model.encode(texts2, convert_to_tensor=True, show_progress_bar=False)
     cosine_scores = util.cos_sim(embeddings1, embeddings2)
-    return cosine_scores.diag()
+    return cosine_scores.diag().tolist()
 
 def clean_text_batch(texts1: List[str], texts2: List[str]): 
     if len(texts1) == len(texts2):

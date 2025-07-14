@@ -1,0 +1,5 @@
+sacrebleu
+torch
+sentence_transformers
+fastapi
+uvicorn

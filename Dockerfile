@@ -6,4 +6,4 @@ RUN python download_model.py
 
 EXPOSE 8000
 
-CMD ["python", "/app/server.py"]
+CMD ["uvicorn", "server:app"]
